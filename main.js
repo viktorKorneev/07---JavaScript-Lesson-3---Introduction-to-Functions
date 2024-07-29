@@ -32,9 +32,19 @@ createBulding("Tower", 30); // Строим башню золота хватае
 createBulding("Blacksmith", 140); // Строить кузницу, золота не хватает
 
 // Функция для увеличения ресурсов
-function increaseResource(currentAmount, increment) {
-    return currentAmount + increment
+function increaseResource(currentAmount, increment = 10) {
+  // Создаем локальную переменную для нового количества ресурсов
+    const newAmount = currentAmount + increment;
+  return newAmount;
+  
 }
+// Она недоступна за пределами функции
+console.log(newAmount) // ReferenceError: newAmount is not defined
 
-gold = increaseResource(gold, 50)
+// Вызов функции без второго параметра
+gold = increaseResource(gold);
+console.log(`New amount of gold: ${gold}`);
+
+// Вызов функции с параметром
+gold = increaseResource(gold, 100);
 console.log(`New amount of gold: ${gold}`);
