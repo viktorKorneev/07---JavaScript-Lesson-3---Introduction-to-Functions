@@ -18,12 +18,12 @@ if (gold >= costGold) {
  buildingName = "Blacksmith";
  costGold = 140;
 
-if (gold >= costGold) {
-  gold -= costGold / console.log(`${buildingName}: work complete!`);
-} else {
-  console.log(`${buildingName}: not enough resources!`);
-}
+
 
 function createBulding(buildingName, costGold) {
-    
+    if (gold >= costGold) {
+        gold -= costGold / console.log(`${buildingName}: work complete!`);
+      } else {
+        console.log(`${buildingName}: not enough resources!`);
+      }
 }
