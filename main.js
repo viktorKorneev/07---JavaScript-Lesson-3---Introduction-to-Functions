@@ -23,3 +23,7 @@ if (gold >= costGold) {
 } else {
   console.log(`${buildingName}: not enough resources!`);
 }
+
+function createBulding(buildingName, costGold) {
+    
+}
